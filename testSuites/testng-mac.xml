@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="SeleniumCrossBrowserSuite-Mac" parallel="tests" thread-count="4">
+    <listeners>
+        <listener class-name="ShavkatUrozboev.TestComponents.Listeners"/>
+    </listeners>
+
+    <test name="ChromeTest">
+        <parameter name="os" value="Mac"/>
+        <parameter name="browser" value="chrome"/>
+        <parameter name="env" value="test"/>
+        <classes>
+            <class name="ShavkatUrozboev.Tests.ErrorValidationsTest"/>
+        </classes>
+    </test>
+
+    <test name="FirefoxTest">
+        <parameter name="os" value="Mac"/>
+        <parameter name="browser" value="firefox"/>
+        <parameter name="env" value="test"/>
+        <classes>
+            <class name="ShavkatUrozboev.Tests.ErrorValidationsTest"/>
+        </classes>
+    </test>
+
+    <test name="EdgeTest">
+        <parameter name="os" value="Mac"/>
+        <parameter name="browser" value="edge"/>
+        <parameter name="env" value="test"/>
+        <classes>
+            <class name="ShavkatUrozboev.Tests.ErrorValidationsTest"/>
+        </classes>
+    </test>
+
+    <test name="SafariTest">
+        <parameter name="os" value="Mac"/>
+        <parameter name="browser" value="safari"/>
+        <parameter name="env" value="test"/>
+        <classes>
+            <class name="ShavkatUrozboev.Tests.ErrorValidationsTest"/>
+        </classes>
+    </test>
+
+</suite>
